@@ -63,12 +63,12 @@ import {
 // --- Firebase Configuration ---
 // REPLACE THIS WITH YOUR REAL FIREBASE CONFIGURATION
 const firebaseConfig = {
-  apiKey: "AIzaSyBbWM8_NlDyBdFEaGPKpo_W3wsAILHwz5c",
+  apiKey: "key-here",
   authDomain: "sliet-store.firebaseapp.com",
   projectId: "sliet-store",
   storageBucket: "sliet-store.firebasestorage.app",
-  messagingSenderId: "15225748992",
-  appId: "1:15225748992:web:d5967e6134580c2084a2e5"
+  messagingSenderId: "123123123",
+  appId: "1:123123123:web:123123123123"
 };
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
@@ -121,7 +121,7 @@ const compressImage = (file) => {
 
 // --- AI Helper ---
 const generateGeminiContent = async (prompt) => {
-  const apiKey = "AIzaSyAw64QwMg3OLLGb-Se4SWtBSF5zuEYptuo"; // Leave empty, injected by environment
+  const apiKey = "key-here"; // Leave empty, injected by environment
   try {
     const response = await fetch(
       `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`,
@@ -146,7 +146,7 @@ const generateGeminiContent = async (prompt) => {
 // 1. Navigation Bar (Updated with Badges)
 const Navbar = ({ appUser, setView, onLogout, offerCount, wishlistCount }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const isAdmin = appUser?.email === '2331003@sliet.ac.in';
+  const isAdmin = appUser?.email === 'xyz@sliet.ac.in';
 
   return (
     <nav className="bg-white shadow-md sticky top-0 z-50">
